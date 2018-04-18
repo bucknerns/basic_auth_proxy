@@ -1,11 +1,11 @@
 
-# basic_auth_proxy: Simple proxy that adds basic auth
+# Base Auth Proxy: Simple proxy that adds basic auth headers
 
 ## Installation:
 
 Recommended:
 ```
-echo '
+$ echo '
 BASIC_USERNAME=<username>
 BASIC_PASS=<password>
 DEST_URL=<url>
