@@ -15,6 +15,10 @@ class Forward(object):
     def __call__(self, req, resp):
         headers = req.headers.copy()
         headers["AUTHORIZATION"] = AUTH
+        for k in list(headers):
+            if k.lower() in [
+                    "content-length", "accept-encoding", "user-agent", "host"]:
+                del headers[k]
         params = req.params
         method = req.method
         url = "{0}{1}".format(URL, req.path)
